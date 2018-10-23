@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Reservation</title>
+	<link href="Css.css" rel="stylesheet" type="text/css" />
+	<link rel="short icon" href="Images/title.png">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="middle-box">
+			<div class="head">
+				<div class="logo"></div>
+				<div class="menu">
+					<a href="Home.html">HOME</a>
+					<a href="Reservation.html">RESERVATION</a>
+					<a href="Contact.html">CONTACT US</a>
+					<a href="Login.html">LOGIN</a>
+					<a href="Login.html" class="logout">LOGOUT</a>
+				</div>
+			</div>
+			<div class="selection">
+				<div class="travel" onclick="resName(this.innerHTML)">FLIGHT</div>
+				<div class="travel" onclick="resName(this.innerHTML)">RAILWAY</div>
+				<div class="travel" onclick="resName(this.innerHTML)">BUS</div>
+				<div class="trip">
+					<div class="tripDetail">FLIGHT RESERVATION</div>
+					<form name="frm" style="float:left;">
+						<div class="booking">
+							<div class="BLeft">
+								<div class="journey">
+									<input type="radio" name="journeyway" value="ONE WAY" checked="checked" />ONE WAY
+								</div>
+								<div class="journey">
+									<input type="radio" name="journeyway" value="RETURN TRIP" />RETURN TRIP
+								</div>
+								<div class="journey">
+									LEAVING FROM
+								</div>
+								<div class="journey">
+									GOING TO
+								</div>
+								<div class="journey">
+									<select name="leaving" class="inputAndSelect">
+										<option value="MUMBAI" selected="selected">MUMBAI</option>
+										<option value="DELHI">DELHI</option>
+										<option value="BANGLORE">BANGLORE</option>
+									</select>
+								</div>
+								<div class="journey">
+									<select name="going" class="inputAndSelect">
+										<option value="MUMBAI" selected="selected" id="1">MUMBAI</option>
+										<option value="DELHI">DELHI</option>
+										<option value="BANGLORE">BANGLORE</option>
+									</select>
+								</div>
+								<div class="journey">
+									DEPARTURE
+								</div>
+								<div class="journey">
+									RETURN
+								</div>
+								<div class="journey">
+									<input type="text" value="11.30pm" class="inputAndSelect" disabled />
+								</div>
+								<div class="journey">
+									<input type="text" value="12.40am" class="inputAndSelect" disabled />
+								</div>
+							</div>
+							<div class="BRight">
+								<div class="journey"></div>
+								<div class="journey"></div>
+								<div class="journey">
+									ADULTS
+								</div>
+								<div class="journey">
+									CHILDREN
+								</div>
+								<div class="journey">
+									<select name="adult" class="inputAndSelect">
+										<option value="1" selected="selected">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select>
+								</div>
+								<div class="journey">
+									<select name="child" class="inputAndSelect">
+										<option value="1" selected="selected">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select>
+								</div>
+								<div class="journey">CABIN/CLASS</div>
+								<div class="journey"></div>
+								<div class="journey">
+									<input type="radio" name="cabinclass" value="ECONOMY" checked="checked" />ECONOMY
+									<input type="radio" name="cabinclass" value="BUSINESS" />BUSINESS
+								</div>
+								<div class="journey">
+									<input type="button" class="btn" value="CHECK" onclick="resCheck()"/>
+								</div>
+							</div>
+							<div class="re-button">
+								<div class="finalcheck" id="total">TOTAL : </div>
+								<div class="finalcheck" id="amount">0</div>
+							</div>
+						</div>
+				</div>
+				</form>
+				<div class="message"></div>
+			</div>
+
+			<div class="foot">
+				<div class="msg">Travel With Us On Your Favourite Destination
+				</div>
+			</div>
+			<div class="copyright">© 2018 Bhoomi Gohil Company Limited All Rights Reserved.</div>
+		</div>
+	</div>
+
+	<script src="JavaScript.js"></script>
+</body>
+
+</html>

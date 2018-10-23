@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Home</title>
+	<link href="Css.css" rel="stylesheet" type="text/css" />
+	<link rel="short icon" href="Images/title.png">
+</head>
+
+<body onload="homeonload()">
+
+	<div class="wrapper">
+		<div class="middle-box">
+			<div class="head">
+				<div class="logo"></div>
+				<div class="menu">
+					<a href="Home.html">HOME</a>
+					<a href="Reservation.html">RESERVATION</a>
+					<a href="Contact.html">CONTACT US</a>
+					<a href="Login.html">LOGIN</a>
+					<a href="Login.html" class="logout">LOGOUT</a>
+				</div>
+			</div>
+			<div class="main">
+				<div class="navl" onclick="slider('left')"></div>
+				<div class="slideShow">
+					<img id="1" src="Images/Place1.gif" class="imgPlace"/>
+				</div>
+				<div class="navr" onclick="slider('right')"></div>
+			</div>
+			<div class="detail">
+				<div class="place">LONDON</div>
+			</div>
+			<div class="foot">
+				<div class="msg">Travel With Us On Your Favourite Destination
+				</div>
+			</div>
+			<div class="copyright">© 2018 Bhoomi Gohil Company Limited All Rights Reserved.</div>
+		</div>
+	</div>
+
+	<div style="display:none">
+		<img src="Images/Place1.gif" id="LONDON" class="databaseimg">
+		<img src="Images/Place2.gif" id="VENICE" class="databaseimg">
+		<img src="Images/Place3.gif" id="NEW ZEALAND" class="databaseimg">
+		<img src="Images/Place4.gif" id="GOA" class="databaseimg">
+		<img src="Images/Place5.gif" id="JAMMU AND KASHMIR" class="databaseimg">
+		<img src="Images/Place6.gif" id="AUSTRALIA" class="databaseimg">
+	</div>
+
+	<script src="JavaScript.js"></script>
+</body>
+
+</html>

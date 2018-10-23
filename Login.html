@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Login</title>
+    <link href="Css.css" rel="stylesheet" type="text/css" />
+    <link rel="short icon" href="Images/title.png">
+</head>
+
+<body onload="loginimgonload()">
+
+    <div class="wrapper">
+        <div class="middle-box">
+            <div class="head">
+                <div class="logo"></div>
+                <div class="menu">
+                    <a href="Home.html">HOME</a>
+                    <a href="Reservation.html">RESERVATION</a>
+                    <a href="Contact.html">CONTACT US</a>
+                    <a href="Login.html">LOGIN</a>
+                    <a href="Login.html" class="logout">LOGOUT</a>
+                </div>
+            </div>
+            <div class="selection">
+
+                <div class="mainLogin">
+                    <div class="login">
+                        <form name="frm">
+                            <div class="heading-of-page">LOGIN</div>
+                            <div class="title">USER NAME</div>
+                            <div class="textmsg" id="username">Enter User Name</div>
+                            <div class="title"><input type="text" name="username" class="inputAndSelect" id="u" onfocus="textfocus(this.name)" onblur="textblur(this.name,this.id)"/></div>
+                            <div class="title">PASSWORD</div>
+                            <div class="textmsg" id="password">Enter Password</div>
+                            <div class="title"><input type="password" name="password" class="inputAndSelect" id="p" onfocus="textfocus(this.name)" onblur="textblur(this.name,this.id)"/></div>
+                            <div class="title">
+                                <input type="button" value="SIGN IN" class="btn"/>
+                                <input type="button" value="SIGN UP" class="btn" onclick="signUp()"/>
+                            </div>
+                            <div class="title" style="font-size:12px"></div>
+                            <div class="title" style="font-size:12px;"></div>
+                        </form>
+                    </div>
+                    <div class="logSlide">
+                        <img src="Images/Place1.gif" id="1" class="image loginImgPlace"/>
+                        <div class="loginImageNames">LONDON</div>
+                    </div>
+                </div>
+
+                <div class="mainRegistration">
+                    <div class="register">
+                        <form name="frm1">
+                            <div class="heading-of-page">REGISTRATION</div>
+                            <div class="title">TITLE</div>
+                            <div class="textmsg" id="title">Select Title</div>
+                            <div class="title">
+                                <select class="inputAndSelect" name="title" id="t" onfocus="textfocus(this.name)" onblur="textblur(this.name,this.id)">
+                                    <option selected="selected" value="PLEASE SELECT" disabled="disabled">PLEASE SELECT</option>
+                                    <option value="Mr.">Mr.</option>
+                                    <option value="Mrs.">Mrs.</option>
+                                    <option value="Ms.">Ms.</option>
+                                </select>
+                            </div>
+                            <div class="title">FIRST NAME</div>
+                            <div class="textmsg" id="firstname">Enter First Name</div>
+                            <div class="title"><input class="inputAndSelect" type="text" name="firstname" id="fn" onfocus="textfocus(this.name)" onblur="textblur(this.name,this.id)"/></div>
+                            <div class="title">LAST NAME</div>
+                            <div class="textmsg" id="lastname">Enter Last Name</div>
+                            <div class="title"><input class="inputAndSelect" type="text" name="lastname" id="ln" onfocus="textfocus(this.name)" onblur="textblur(this.name,this.id)"/></div>
+                            <div class="title">CITY</div>
+                            <div class="textmsg" id="city">Enter City</div>
+                            <div class="title"><input type="text" class="inputAndSelect" name="city" id="ct" onfocus="textfocus(this.name)" onblur="textblur(this.name,this.id)"/></div>
+                            <div class="title">STATE</div>
+                            <div class="textmsg" id="state">Enter State</div>
+                            <div class="title"><input class="inputAndSelect" type="text" name="state" id="s" onfocus="textfocus(this.name)" onblur="textblur(this.name,this.id)"/></div>
+                            <div class="title">COUNTRY</div>
+                            <div class="textmsg" id="country">Enter Country</div>
+                            <div class="title"><input class="inputAndSelect" type="text" name="country" id="c" onfocus="textfocus(this.name)" onblur="textblur(this.name,this.id)"/></div>
+                            <div class="title">E-MAIL</div>
+                            <div class="textmsg" id="email">Enter Email</div>
+                            <div class="title"><input class="inputAndSelect" type="text" name="email" id="e" onfocus="textfocus(this.name)" onblur="textblur(this.name,this.id)"/></div>
+                            <div class="title">PHONE NO</div>
+                            <div class="textmsg" id="phone">Enter Phone Number</div>
+                            <div class="title"><input class="inputAndSelect" type="text" name="phone" id="p" onfocus="textfocus(this.name)" onblur="textblur(this.name,this.id)"/></div>
+                            <div class="title">ADDRESS</div>
+                            <div class="textmsg" id="address">Enter Address</div>
+                            <div class="title"><textarea class="inputAndSelect textarea" name="address" id="a" onfocus="textfocus(this.name)" onblur="textblur(this.name,this.id)"></textarea></div>
+                            <div class="title">
+                                <input type="button" class="btn" value="SUBMIT"/>
+                                <input type="button" class="btn" value="BACK" onclick="back()"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="foot">
+                <div class="msg">Travel With Us On Your Favourite Destination
+                </div>
+            </div>
+            <div class="copyright">© 2018 Bhoomi Gohil Company Limited All Rights Reserved.</div>
+        </div>
+    </div>
+
+    <div style="display:none">
+  		<img src="Images/Place1.gif" id="LONDON" class="databaseimg">
+  		<img src="Images/Place2.gif" id="VENICE" class="databaseimg">
+  		<img src="Images/Place3.gif" id="NEW ZEALAND" class="databaseimg">
+  		<img src="Images/Place4.gif" id="GOA" class="databaseimg">
+  		<img src="Images/Place5.gif" id="JAMMU AND KASHMIR" class="databaseimg">
+  		<img src="Images/Place6.gif" id="AUSTRALIA" class="databaseimg">
+  	</div>
+
+    <script src="JavaScript.js"></script>
+</body>
+
+</html>
