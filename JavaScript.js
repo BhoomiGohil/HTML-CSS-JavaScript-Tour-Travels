@@ -133,10 +133,37 @@ function textfocus(text)
   document.getElementById(text).style.display = "none";
 }
 
-function textblur(name , id)
-{
-  if(document.getElementById(id).value === "")
-  {
-    document.getElementById(name).style.display = "block";
+function textblur(name , id){
+  if(document.getElementById(id).value === ""){
+    textblock(name);
   }
+  else{
+    text = document.getElementById(id).value;
+    if(id === "fn" || id === "ln" || id === "ct" || id === "s" || id === "c"){
+      if(text.match(/^[A-Za-z]+$/)){}
+      else{
+        textblock(name);
+        document.getElementById(name).innerHTML = "Enter Alphabet Only...";
+      }
+    }
+    else if(id === "e"){
+      if(text.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)){}
+      else{
+        textblock(name);
+        document.getElementById(name).innerHTML = "Enter Email Properly...";
+      }
+    }
+    else if(id === "ph"){
+      if(text.match(/^\d{10}$/)){}
+      else {
+        textblock(name);
+        document.getElementById(name).innerHTML = "Enter 10 Digit Only...";
+      }
+    }
+  }
+}
+
+function textblock(name)
+{
+  document.getElementById(name).style.display = "block";
 }
